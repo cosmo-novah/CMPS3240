@@ -1,13 +1,11 @@
-ASM=gcc
-ASMFLAGS=-c
-LINK=gcc
-
-all: fib10.out
+LINKER=gcc
+ASSEMBLER=as
 
 fib10.out: fib10.o
-	${LINK} $< -o $@
+        ${LINKER} $< -o $@
+
 fib10.o: fib10.s
-	${ASM} ${ASMFLAGS} $< -o $@
+        as $< -o $@
 
 clean:
-	rm -r -f *.o *.out
+        rm -r -f *.out *.o
