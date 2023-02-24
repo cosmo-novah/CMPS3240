@@ -1,6 +1,6 @@
 #author: Jose Zamora
 #date: 02/17/2023
-#CMPS 3240 - Lab4
+#CMPS 3240 - Lab3
 
 .data
         .global string1
