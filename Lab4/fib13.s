@@ -1,4 +1,4 @@
-//author: Jose Zamroa
+//author: Jose Zamora
 //date: 02/24/22
 //CMPS 3240 - Lab 4
 
