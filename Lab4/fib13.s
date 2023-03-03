@@ -1,3 +1,7 @@
+//author: Jose Zamroa
+//date: 02/24/22
+//CMPS 3240 - Lab 4
+
 .data
 .global string1
 string1:
