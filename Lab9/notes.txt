@@ -1,0 +1,32 @@
+Author: Jose Zamora
+Date: 05.05.2023
+CMPS 3240 - Lab 9 Notes
+
+# c[i] = a[i] + b[i];
+
+# assumption:
+# n -> w0
+# i -> w1
+# *a -> x2
+# *b -> x3
+# *c -> x4
+
+looptop: ldr w1, [sp]
+cmp w1, w0
+bge loopquit
+
+#Chunk 1
+ld1 {v0.2s}, [x2], 8
+ld1 {x1.2s}, [x3], 8
+add {v0.2s}, {v0.2s}, {v1.2s}
+st1 {v0.2s}, [x4], 8
+
+#Chunk 2
+ld1 {v0.2s}, [x2], 8
+ld1 {x1.2s}, [x3], 8
+add {v0.2s}, {v0.2s}, {v1.2s}
+st1 {v0.2s}, [x4], 8
+
+ldr w1, [sp]
+add w1, w1, #2
+j looptop
